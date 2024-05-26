@@ -1,6 +1,6 @@
 Mulheres No Game
 
-Apreeesenta:
+Apresenta:
 
 
 Capturas de Tela
