@@ -1,0 +1,157 @@
+/* Estilo geral do formulário */
+#receber {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    color: #1E182B;
+    border: none;
+}
+
+#receber h1, #receber h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#receber h2 {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+/* Botões de etapa (1, 2, 3) */
+#receber .etapa-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#receber .etapa-buttons button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#receber .etapa-buttons button svg circle {
+    fill: #BBAFD4;
+}
+
+#receber .etapa-buttons button .numero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #FFF;
+    display: none;
+}
+
+/* Estilo para botões ativos */
+#receber .etapa-buttons button.active {
+    background-color: #1E182B;
+}
+
+#receber .etapa-buttons button.active .numero {
+    display: block; 
+}
+
+#receber .etapa-buttons button.active svg circle {
+    fill: #1E182B;
+}
+
+/* Layout das etapas */
+#receber .etapa {
+    display: none;
+}
+
+#receber .etapa.active {
+    display: block;
+}
+
+/* Estilos para colunas */
+#receber .linha {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#receber .coluna {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+    margin: 5px;
+}
+
+/* Estilos para labels */
+#receber label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilos para inputs */
+#receber input[type="text"],
+#receber input[type="number"],
+#receber input[type="email"],
+#receber input[type="tel"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #1E182B;
+    border-radius: 5px;
+}
+
+/* Estilos para separador */
+hr {
+    margin: 10% 0 5%;
+    background: #1E182B;
+    width: 100%;
+    height: 1px;
+    border: none;
+}
+
+/* Estilos para botões de avançar */
+#receber .button-next {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+#receber .button-next button {
+    width: 180px;
+    height: 61px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid #1E182B;
+    background: #FFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #1E182B;
+    margin-right: 10px; 
+    transition: background-color 0.3s; 
+}
+
+#receber .button-next button:first-child {
+    margin-left: 0; 
+}
+
+#receber .button-next button:nth-child(2) {
+    margin-right: 10px; 
+}
+
+#receber .button-next button:hover {
+    background-color: #1E182B; 
+    color: #FFF; 
+}
