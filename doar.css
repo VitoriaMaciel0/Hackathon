@@ -1,0 +1,157 @@
+/* Estilo geral do formulário */
+#doar {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    color: #1E182B;
+    border: none;
+}
+
+#doar h1, #doar h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#doar h2 {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+/* Botões de etapa (1, 2, 3) */
+#doar .etapa-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#doar .etapa-buttons button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#doar .etapa-buttons button svg circle {
+    fill: #BBAFD4;
+}
+
+#doar .etapa-buttons button .numero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #FFF;
+    display: none;
+}
+
+/* Estilo para botões ativos */
+#doar .etapa-buttons button.active {
+    background-color: #1E182B;
+}
+
+#doar .etapa-buttons button.active .numero {
+    display: block; 
+}
+
+#doar .etapa-buttons button.active svg circle {
+    fill: #1E182B;
+}
+
+/* Layout das etapas */
+#doar .etapa {
+    display: none;
+}
+
+#doar .etapa.active {
+    display: block;
+}
+
+/* Estilos para colunas */
+#doar .linha {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#doar .coluna {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+    margin: 5px;
+}
+
+/* Estilos para labels */
+#doar label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilos para inputs */
+#doar input[type="text"],
+#doar input[type="number"],
+#doar input[type="email"],
+#doar input[type="telefone"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #1E182B;
+    border-radius: 5px;
+}
+
+/* Estilos para separador */
+hr {
+    margin: 10% 0 5%;
+    background: #1E182B;
+    width: 100%;
+    height: 1px;
+    border: none;
+}
+
+/* Estilos para botões de avançar */
+#doar .button-next {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+#doar .button-next button {
+    width: 180px;
+    height: 61px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid #1E182B;
+    background: #FFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #1E182B;
+    margin-right: 10px; 
+    transition: background-color 0.3s; 
+}
+
+#doar .button-next button:first-child {
+    margin-left: 0; 
+}
+
+#doar .button-next button:nth-child(2) {
+    margin-right: 10px; 
+}
+
+#doar .button-next button:hover {
+    background-color: #1E182B; 
+    color: #FFF; 
+}

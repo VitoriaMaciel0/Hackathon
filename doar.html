@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Doação</title>
+    <link rel="stylesheet" href="doar.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #030431;
+            color: white;
+        }
+        .logo {
+            font-size: 1.5rem;
+        }
+        .menu {
+            list-style: none;
+            display: flex;
+        }
+        .menu li {
+            padding: 0 1rem;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+        }
+        .etapa {
+            display: none;
+        }
+        .etapa.active {
+            display: block;
+        }
+        .etapa-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin: 1rem 0;
+        }
+        .etapa-buttons button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .etapa-buttons button.active svg circle {
+            stroke: #030431;
+            stroke-width: 2;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <img src="assets/logo-kabum (1) 1.png" alt="Logo">
+        <ul class="menu">
+            <li><a href="doar.html">Quero Doar</a></li>
+            <li><a href="receber.html">Quero Receber</a></li>
+            <li><a href="comofunciona.html">Regulamento</a></li>
+            <li><a href="depoimentos.html">Depoimentos</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </header>
+
+    <form id="doar">
+        <div class="etapa-buttons">
+            <button type="button" class="active" onclick="avancarEtapa(1)">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                        <circle cx="13" cy="13" r="13"/>
+                    </svg>
+                </span>
+                <span class="numero">1</span>
+            </button>
+            <button type="button" onclick="avancarEtapa(2)">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                        <circle cx="13" cy="13" r="13"/>
+                    </svg>
+                </span>
+                <span class="numero">2</span>
+            </button>
+            <button type="button" onclick="avancarEtapa(3)">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                        <circle cx="13" cy="13" r="13"/>
+                    </svg>
+                </span>
+                <span class="numero">3</span>
+            </button>
+        </div>
+
+        <div id="etapa1" class="etapa active">
+            <h1>Formulário de doação de equipamento</h1>
+            <h2>Informações pessoais</h2>
+
+            <div class="linha">
+                <div class="coluna">
+                    <label for="nome">Seu nome completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="coluna">
+                    <label for="email">Seu email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="coluna">
+                    <label for="telefone">Telefone</label>
+                    <input type="telefone" id="telefone" name="telefone" required>
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="coluna">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" maxlength="8" required>
+                </div>
+                <div class="coluna">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" required>
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="coluna">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" required>
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="coluna">
+                    <label for="numero">Número:</label>
+                    <input type="text" id="numero" name="numero" required>
+                </div>
+                <div class="coluna">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro" required>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="button-next">
+                <button type="button" onclick="avancarEtapa(2)">Próximo</button>
+            </div>
+        </div>
+
+        <div id="etapa2" class="etapa">
+            <h1>Formulário de doação de equipamento</h1>
+            <h2>Detalhes da doação</h2>
+
+            <div class="linha">
+                <div class="coluna">
+                    <label for="tipo-equipamento">1 - Tipo de Equipamento</label>
+                    <label for="pc-desktop">
+                        <input type="checkbox" id="pc-desktop" name="tipo-equipamento" value="pc-desktop"> PC/Desktop
+                    </label>
+                    <label for="notebook">
+                        <input type="checkbox" id="notebook" name="tipo-equipamento" value="notebook"> Notebook
+                    </label>
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="coluna">
+                    <label for="marca-modelo">2 - Marca e Modelo</label>
+                    <input type="text" id="marca-modelo" name="marca-modelo" required>
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="coluna">
+                    <label for="conservacao">3 - Condição do equipamento</label>
+                    <label for="excelente">
+                        <input type="radio" id="excelente" name="conservacao" value="excelente" required> Excelente
+                    </label>
+                    <label for="boa">
+                        <input type="radio" id="boa" name="conservacao" value="boa" required> Boa
+                    </label>
+                    <label for="novo">
+                        <input type="radio" id="novo" name="conservacao" value="novo" required> Novo
+                    </label>
+                    <label for="usado">
+                        <input type="radio" id="usado" name="conservacao" value="usado" required> Usado
+                    </label>
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="coluna">
+                    <label for="comentario">4 - Comentários Adicionais</label>
+                    <textarea id="comentario" name="comentario" required></textarea>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="button-next">
+                <button type="button" onclick="avancarEtapa(1)">Voltar</button>
+                <button type="button" onclick="avancarEtapa(3)">Próximo</button>
+            </div>
+        </div>
+
+        <div id="etapa3" class="etapa">
+            <h1>Formulário de doação de equipamento</h1>
+            <h2>Logística da Doação</h2>
+            <!-- Campos adicionais para a etapa 3 -->
+
+            <div class="linha">
+                <div class="coluna">
+                    <label for="metodo-envio">1 - Método de Envio</label>
+                    <label for="correio">
+                        <input type="checkbox" id="correio" name="correio" value="correio" required> Correio
+                    </label>
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="coluna">
+                    <label for="pref-contato">2 - Preferências de Contato</label>
+                    <label for="email-cont">
+                        <input type="checkbox" id="email-cont" name="email-cont" value="email-cont" required> Email
+                    </label>
+                    <label for="telefone-cont">
+                        <input type="checkbox" id="telefone-cont" name="telefone-cont" value="telefone-cont" required> Telefone
+                    </label>
+                    <label for="whatsapp-cont">
+                        <input type="checkbox" id="whatsapp-cont" name="whatsapp-cont" value="whatsapp-cont" required> WhatsApp
+                    </label>
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="coluna">
+                    <label for="mensagem">Mensagem de Encorajamento</label>
+                    <textarea id="mensagem" name="mensagem"></textarea>
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="coluna">
+                    <label for="termos-condicoes">Termos e Condições</label>
+                    <label for="correio">
+                        <input type="checkbox" id="termos-condicoes" name="termos-condicoes" value="termos-condicoes" required> Concordo com os Termos e Condições da Doação.
+                    </label>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="button-next">
+                <button type="submit">Enviar</button>
+            </div>
+
+            <hr>
+    
+            <div class="button-next">
+                <button type="button" onclick="avancarEtapa(2)">Voltar</button>
+                
+            </div>
+        </div>
+    </form>
+    
+    <script src="doar.js" defer ></script>
+    
+    </body>
+    </html>
+    
