@@ -1,103 +1,518 @@
+.testimonials-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.testimonial {
+  flex-basis: calc(33.33% - 20px); /* Distribui igualmente os blocos de depoimento */
+  position: relative;
+}
+
+.testimonial-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.imagem-esquerda {
+  position: absolute; /* Posição absoluta */
+  top: 350; /* Distância do topo */
+  left: 0; /* Distância da esquerda */
+  margin-left: 30px; /* Ajuste a posição da imagem testemunha */
+  margin-top: 0; /* Ajuste a posição da imagem testemunha */
+}
+
+.testimonial-text,
+.testimonial-author {
+  margin-left: 20px; /* Ajuste a posição do texto do depoimento e do autor */
+  color: #ccc;
+}
+
+.testimonial-title {
+  color: white; /* Cor do texto branco */
+  text-align: center; /* Centraliza o texto */
+  margin-top: 50px;
+}
+
+.meio {
+  text-align: center; /* Centraliza o conteúdo */
+}
+.meio img {
+  display: block; /* Faz a imagem se comportar como um bloco */
+  
+  margin: auto; /* Centraliza a imagem horizontalmente */
+  
+}
+
+.meio,
+.photo-text-section {
+background-color: #f0f0f0; /* Define o fundo cinza */
+padding: 20px; /* Adiciona um espaçamento interno */
+}
+
+.meio p {
+color: #000; /* Define a cor do texto dentro da seção "meio" */
+}
+.text h1 {
+font-size: 32px; /* Tamanho da fonte para o título h1 */
+}
+
+.text p {
+font-size: 18px; /* Tamanho da fonte para o texto p */
+}
+.photo {
+flex: 1;
+max-width: 100px; /* Reduzindo a largura máxima do contêiner */
+margin-left: auto;
+overflow: hidden; /* Adiciona overflow hidden para esconder qualquer parte da imagem que exceda os limites */
+}
+
+.photo img {
+width: 20%; /* Definindo a largura da imagem como 20% do contêiner pai */
+max-width: 100%; /* Limitando a largura máxima da imagem para não exceder o contêiner pai */
+height: auto; /* Mantendo a altura proporcional à largura */
+display: block; /* Garantindo que a imagem seja exibida como um bloco */
+}
+
+.text {
+flex: 1;
+max-width: 50%;
+margin-right: auto;
+margin-top: 50px;
+
+
+}
+
+.text h2 {
+margin-top: 0;
+}
+
+.text p {
+line-height: 1.6;
+margin-top: 40px;
+}
+.photo-text-section {
+display: flex;
+align-items: flex-start;
+justify-content: center;
+position: relative;
+padding: 20px;
+}
+.top-left-image {
+position: absolute; /* Posição absoluta para a imagem */
+top: 0; /* Posiciona a imagem no topo da seção */
+left: 0;
+padding-left: 20px; /* Posiciona a imagem no canto esquerdo da seção */
+}
+
+.top-left-image img {
+max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+border-radius: 8px; /* Adiciona borda arredondada à imagem */
+/* Adicione outros estilos conforme necessário */
+}
+.photo {
+flex: 1;
+max-width: 50%;
+}
+.text h1 {
+font-size: 40px; /* Tamanho da fonte para o título h1 */
+}
+
+.text p {
+font-size: 20px; /* Tamanho da fonte para o texto p */
+}
+.photo img {
+width: 100%;
+height: 100%;
+border-radius: 8px;
+object-fit: cover;
+}
+
+.text {
+flex: 1;
+max-width: 50%;
+padding-left: 20px;
+margin-top: 0px;
+}
+
+.text h2 {
+margin-top: 0;
+}
+
+.text p {
+line-height: 1.6;
+}
+
+.secondary-button {
+background-color: yellow;
+border: none;
+color: black;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+border-radius: 5px;
+margin-top: 10px;
+}
+
+.secondary-button:hover {
+background-color: #f1c40f;
+}
+.meio {
+margin-top: 100px;
+text-align: center;
+padding: 20px;
+}
+
+.meio p {
+font-size: 24px; /* Ajuste o tamanho da fonte conforme desejado */
+}
+
+.photo-text-section-right {
+display: flex;
+align-items: flex-start;
+justify-content: center;
+position: relative;
+padding: 20px;
+background-color:#8d55ce; 
+}
+
+.photo-content {
+flex: 1;
+max-width: 50%;
+padding-left: 20px;
+}
+
+.photo-content img {
+width: 100%;
+height: 100%;
+border-radius: 8px;
+object-fit: cover;
+}
+.top-right-image {
+position: absolute; /* Posição absoluta para a imagem */
+top: 0; /* Posiciona a imagem no topo da seção */
+right: 0;
+padding: 20px; /* Posiciona a imagem no canto direito da seção */
+}
+
+.top-right-image img {
+max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+border-radius: 8px; /* Adiciona borda arredondada à imagem */
+/* Adicione outros estilos conforme necessário */
+}
+.text-content {
+flex: 1;
+max-width: 50%;
+padding-right: 20px;
+padding-left: 40px;
+display: flex;
+margin-top: 250px;
+flex-direction: column; /* Define a direção do flexbox como coluna */
+justify-content: center; /* Centraliza verticalmente o conteúdo */
+color: white; /* Define a cor do texto como branco */
+}
+.text-content h1 {
+font-size: 40px; /* Tamanho da fonte para o título h1 */
+}
+
+.text-content p {
+font-size: 20px; /* Tamanho da fonte para o texto p */
+margin-top: 20px; /* Espaço superior entre o título e o parágrafo */
+line-height: 1.6;
+}
+.text-content h2 {
+margin-top: 0;
+}
+
+.text-content p {
+line-height: 1.6;
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: black;
+  border: 2px solid black; /* Adiciona uma borda preta */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 200px;
+  margin-left: 450px;
+  border-radius: 5px;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra embaixo do botão */
+  }
+
+.secondary-button2 {
+  background-color: white;
+  color: black;
+  border: 2px solid black; /* Adiciona uma borda preta */
+  padding: 10px 20px;
+  font-size: 16px;
+  width: 200px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra embaixo do botão */
+  }
+  
+  .faq {
+    padding: 40px 20px;
+    background-color: #00FFFF; /* Fundo ciano */
+    max-width: none; /* Remove a largura máxima */
+    width: 100%; /* Largura de 100% */
+    margin: 0 auto;
+    height: auto; /* Altura automática */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .faq h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FF1493; /* Cor rosa */
+  }
+  
+  .faq-item {
+    margin-bottom: 20px; /* Aumenta o espaço entre as perguntas */
+    border-radius: 10px;
+    overflow: hidden; /* Oculta as bordas das respostas */
+  }
+  
+  .faq-question {
+    padding: 20px;
+    background-color: white; /* Fundo rosa */
+    cursor: pointer;
+    font-weight: bold;
+    color: #058383; /* Cor branca */
+    margin-bottom: 10px;
+    border-radius: 10px; /* Arredonda todas as bordas */
+  }
+  
+  .faq-answer {
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco */
+    display: none;
+    color: black; /* Cor rosa */
+    border-radius: 10px; /* Arredonda todas as bordas */
+  }
+  
+  
+
+body {
+margin: 0;
+padding: 0;
+}
 
 .container {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
-  }
-  .column {
-    width: 30%;
-    text-align: center;
-  }
-  .round-image {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin: auto;
-    display: block;
-  }
-  .button {
-    display: block;
-    margin: auto;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-  }
-  .testimonials {
-    text-align: center;
-    background-color: #f5f5f5;
-    padding: 2rem;
-  }
-  
-  .card-container {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .card {
-    width: 30%;
-    margin: 1rem;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-  }
-  
-  .testimonial-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: auto;
-  }
-  
-  .testimonial-text {
-    font-style: italic;
-    color: #333;
-  }
-  
-  .testimonial-author {
-    font-weight: bold;
-    color: #666;
-  }
-  .container {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
-  }
-  .column {
-    width: 30%;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  .red {
-    background-color: #ff0000;
-  }
-  .blue {
-    background-color: #0000ff;
-  }
-  .dark-blue {
-    background-color: #00008b;
-  }
-  .round-image {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin: auto;
-    display: block;
-  }
-  .button {
-    display: block;
-    margin: auto;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-  }
+display: flex;
+justify-content: space-between;
+}
 
+.section {
+  margin-top: 80px;
+flex: 1;
+text-align: center;
+background-color: white;
+border: 2px solid black;
+padding: 30px;
+margin-right: 20px;
+margin-left: 20px; 
+width: 456px; /* Definindo largura */
+height: 564px; /* Definindo altura */
+}
+
+.image-container {
+width: 300px; /* Definindo largura da imagem */
+height: 300px; /* Definindo altura da imagem */
+overflow: hidden; /* Garante que a imagem não ultrapasse os limites do container */
+margin: 0 auto; /* Centraliza horizontalmente */
+display: flex; /* Ativa flexbox para alinhamento vertical */
+justify-content: center; /* Centraliza verticalmente */
+align-items: center; /* Centraliza verticalmente */
+}
+
+.image-container img {
+max-width: 100%; /* Garante que a imagem se ajuste dentro do container */
+height: auto; /* Permite que a altura se ajuste automaticamente mantendo a proporção */
+border-radius: 8px; /* Adiciona borda arredondada */
+}
+
+.section p {
+color: #ac067a;
+}
+
+.gamer-button {
+background-color: transparent;
+color: black;
+border: 2px solid black; /* Adiciona uma borda preta */
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+border-radius: 5px;
+box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra embaixo do botão */
+}
+
+
+.gamer-button:hover {
+background-color: #94055a; /* Altera a cor ao passar o mouse */
+}
+
+.section:nth-child(3) .image-container img {
+width: 200px; /* Definindo um tamanho menor para a terceira imagem */
+}
+
+.how-it-works {
+  background-color: #00FFFF; /* Fundo ciano */
+  padding: 40px 20px; /* Espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+  position: relative; /* Para posicionar elementos absolutos dentro desta seção */
+}
+
+.how-it-works h1 {
+  margin-bottom: 40px; /* Espaço abaixo do título */
+  font-size: 32px; /* Tamanho da fonte do título */
+}
+
+.columns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 150px;
+}
+
+.coluna {
+  text-align: center;
+  margin: 0 20px; /* Margem entre colunas */
+}
+
+.image-containers {
+  width: 232px; /* Largura do contêiner */
+  height: 250px; /* Altura do contêiner */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  overflow: hidden; /* Esconde partes que excedem os limites */
+  border-radius: 50%; /* Torna o contêiner circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-containers img {
+  width: 100%; /* Reduzindo a largura da imagem */
+  height: 100%; /* Reduzindo a altura da imagem */
+  object-fit: cover; /* Cobre o contêiner mantendo a proporção */
+  border-radius: 100%; /* Torna a imagem circular */
+}
+
+.coluna h2 {
+  margin-top: 20px; /* Espaço acima do subtítulo */
+  font-size: 24px; /* Tamanho da fonte do subtítulo */
+}
+
+.coluna p {
+  margin-top: 10px; /* Espaço entre o subtítulo e o parágrafo */
+  color: black; /* Cor do texto */
+  font-size: 16px; /* Tamanho da fonte do texto */
+}
+
+.arrow {
+  font-size: 50px; /* Tamanho da seta */
+  margin: 0 10px; /* Espaço ao redor da seta */
+}
+
+.image-right {
+  position: absolute; /* Posição absoluta para a imagem */
+  top: 20px; /* Ajuste o valor conforme necessário para o posicionamento vertical */
+  right: 20px; /* Ajuste o valor conforme necessário para o posicionamento horizontal */
+  padding: 50px; /* Posiciona a imagem no canto direito da seção */
+}
+
+.image-right img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+  border-radius: 8px; /* Adiciona borda arredondada à simagem */
+  /* Adicione outros estilos conforme necessário */
+}
+.image-prom {
+  position: relative; /* Torna o container relativo para posicionar o texto absoluto */
+}
+.image-promoçao {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 240px;
+}
+.text-over-image {
+  position: absolute; /* Posiciona o texto absolutamente em relação ao container pai */
+  top: 30px; /* Distância do topo */
+  left: 500px; /* Distância da esquerda */
+  color: black; /* Cor do texto */
+  font-size: 30px; /* Tamanho da fonte */
+}
+.h1{
+  font-size: 50px;
+}
+.footer {
+  background-color: #800080; /* Cor roxa */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer-logo {
+  width: 100px;
+  float: left;
+
+}
+
+.footer-social {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px; /* Ajuste conforme necessário */
+}
+
+.footer-social img {
+  max-width: 100%;
+  height: auto;
+}
+.navbar .menu a {
+  color: white; /* Define a cor do texto para branco */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+.navbar .menu a:hover {
+  text-decoration: underline; /* Adiciona sublinhado apenas ao passar o mouse */
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #FF1493; /* Cor de fundo rosa */
+  border-radius: 50%; /* Formato de círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999; /* Garante que fique acima de outros elementos */
+}
+
+.back-to-top a {
+  color: white; /* Cor do ícone */
+  text-decoration: none;
+}
+
+.back-to-top i {
+  font-size: 20px; /* Tamanho do ícone */
+}
